@@ -1,0 +1,35 @@
+# emotion detection system - universal cpu requirements
+# ===================================================
+# cpu-only version for maximum compatibility on all pc's
+#
+# quick install: pip install -r requirements.txt
+# python version: 3.8+ required
+# universal support: works on any windows, mac, or linux pc
+
+# core computer vision & deep learning (cpu versions)
+opencv-python>=4.8.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# image processing & data handling  
+pillow>=9.0.0
+numpy>=1.21.0
+
+# optional performance packages (uncomment if desired)
+# intel-extension-for-pytorch  # intel cpu optimization  
+# openvino-dev                 # intel inference acceleration          
+
+# Visualization & UI
+matplotlib==3.10.5            
+seaborn==0.13.2               
+pillow==11.3.0                
+# 💡 Installation Notes:
+# - For CPU-only: Replace torch URLs with CPU versions
+# - CUDA 11.8 compatible - ensure GPU drivers are updated
+# - Windows users: Use the provided batch file for easy setup
+# - macOS/Linux: Standard pip installation should work
+
+# 🎯 System Requirements:
+# - RAM: 4GB+ recommended (8GB+ for optimal performance)
+# - GPU: NVIDIA GPU with CUDA support (optional but recommended)
+# - Camera: Any USB/built-in camera supported by OpenCV

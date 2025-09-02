@@ -1,0 +1,118 @@
+# Facial Emotion Detection - Git Ignore Rules
+# ===============================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch models and data
+*.pth
+*.pt
+!emotion_model.pth  # Keep the main production model
+
+# Training data and datasets
+data/
+models/
+
+# Conda Environment
+.conda/
+*.conda
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Screenshots and outputs
+*screenshot*.jpg
+*screenshot*.png
+emotion_*.jpg
+output_*.png
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Model backups (except production)
+models/*.pth
+!models/BACKUP_ORIGINAL_99.43pct_*.pth
+
+# Data files (large datasets)
+data/train/
+data/test/
+data/train_clean/
+data/test_clean/
+*.csv
+*.json
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation builds
+docs/_build/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Conda environments
+.conda/
+.condaenv/
+
+# Development files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
