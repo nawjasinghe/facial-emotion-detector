@@ -22,7 +22,7 @@ This facial emotion detection system provides real-time emotion recognition usin
 
 ## Model Download
 
-[https://huggingface.co/Tricc/facial-emotion-detector/tree/main](https://huggingface.co/Naweiner/facial-emotion-detector/tree/main)
+https://huggingface.co/Naweiner/facial-emotion-detector/tree/main
 
 ## Key Features
 
