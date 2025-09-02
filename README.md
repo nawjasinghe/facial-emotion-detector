@@ -33,7 +33,7 @@ This facial emotion detection system provides real-time emotion recognition usin
 - Detects 7 emotions: Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise
 - Real-time confidence scoring for each emotion
 - Visual emotion probability bars
-- Sadness may be difficult for the model to recognize do to the bias correction
+- Sadness may be difficult for the model to recognize due to the bias correction
 
 ### AI Model
 - ResNet18-based CNN architecture with 28M parameters
@@ -57,8 +57,8 @@ pip install -r requirements.txt
 ### Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nawjasinghe/facial-emotion-detection.git
-   cd facial-emotion-detection
+   git clone https://github.com/nawjasinghe/emotion-detector.git
+   cd emotion-detector
    ```
 
 2. **Install dependencies**
