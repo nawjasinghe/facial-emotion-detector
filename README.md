@@ -20,6 +20,10 @@
 
 This facial emotion detection system provides real-time emotion recognition using deep learning. Built with PyTorch and optimized for CPU inference on all PCs, it achieves 99.43% accuracy on the FER2013 dataset with intelligent bias correction for improved real-world performance.
 
+## Model Download
+
+https://huggingface.co/Tricc/facial-emotion-detector/tree/main
+
 ## Key Features
 
 - **74.43% Accuracy** - Trained on FER2013 dataset
