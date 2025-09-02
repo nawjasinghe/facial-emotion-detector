@@ -453,8 +453,8 @@ class EmotionDetector:
             # detect faces
             faces = self.detect_faces(frame)
             
-            # determine if we should analyze emotion this frame (every 6th frame)
-            should_analyze = analysis_frame_counter >= 6
+            # determine if we should analyze emotion this frame (every 3rd frame for more responsiveness)
+            should_analyze = analysis_frame_counter >= 3
             if should_analyze:
                 analysis_frame_counter = 0
             
@@ -482,7 +482,7 @@ class EmotionDetector:
                             # predict emotion only on analysis frames
                             emotion_idx, confidence, probabilities = self.predict_emotion(face_region)
                             
-                            # no smoothing - instant updates
+                            # immediate updates for responsive detection
                             self.current_emotion_idx = emotion_idx
                             self.current_confidence = confidence
                             self.current_probabilities = probabilities
@@ -497,21 +497,29 @@ class EmotionDetector:
                             cv2.rectangle(frame, (x, y), (x + w, y + h), (128, 128, 128), 2)
                             cv2.putText(frame, "analyzing...", (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (128, 128, 128), 2)
                     else:
+                        # reset emotion state for invalid face regions
+                        self.current_emotion_idx = None
+                        self.current_confidence = 0.0
+                        self.current_probabilities = np.ones(7) / 7
                         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
                         cv2.putText(frame, "face too small - move closer", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 165, 255), 2)
                 else:
-                    # draw small face indicators for all detected faces
-                    for (fx, fy, fw, fh) in faces:
-                        cv2.rectangle(frame, (fx, fy), (fx + fw, fy + fh), (255, 0, 0), 2)
-                    cv2.putText(frame, "no face detected", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-                    cv2.putText(frame, "tips: good lighting, face center, move closer", (10, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 165, 255), 2)
-            else:
-                # reset emotion state when no face detected
-                if self.current_emotion_idx is not None:
+                    # reset emotion state for small faces
                     self.current_emotion_idx = None
                     self.current_confidence = 0.0
                     self.current_probabilities = np.ones(7) / 7
                     self.current_face_coords = None
+                    # draw small face indicators for all detected faces
+                    for (fx, fy, fw, fh) in faces:
+                        cv2.rectangle(frame, (fx, fy), (fx + fw, fy + fh), (255, 0, 0), 2)
+                    cv2.putText(frame, "face too small", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                    cv2.putText(frame, "tips: good lighting, face center, move closer", (10, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 165, 255), 2)
+            else:
+                # reset emotion state when no face detected
+                self.current_emotion_idx = None
+                self.current_confidence = 0.0
+                self.current_probabilities = np.ones(7) / 7
+                self.current_face_coords = None
                 
                 cv2.putText(frame, "no face detected", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
                 cv2.putText(frame, "tips: good lighting, face center, move closer", (10, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 165, 255), 2)
