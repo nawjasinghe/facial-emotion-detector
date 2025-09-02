@@ -24,6 +24,8 @@ This facial emotion detection system provides real-time emotion recognition usin
 
 https://huggingface.co/Naweiner/facial-emotion-detector/tree/main
 
+**Put the .pth file in the same directory as all the other project files**
+
 ## Key Features
 
 - **74.43% Accuracy** - Trained on FER2013 dataset
