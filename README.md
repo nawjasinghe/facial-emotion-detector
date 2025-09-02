@@ -57,8 +57,8 @@ pip install -r requirements.txt
 ### Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nawjasinghe/emotion-detector.git
-   cd emotion-detector
+   git clone https://github.com/nawjasinghe/facial-emotion-detector.git
+   cd facial-emotion-detector
    ```
 
 2. **Install dependencies**
