@@ -164,18 +164,8 @@ This system was developed using machine learning techniques:
 - **Transfer Learning**: ResNet18 pre-trained backbone
 - **Bias Analysis**: Statistical analysis of emotion distribution
 - **Optimization**: Frame rate control and memory management
-
-## Acknowledgments
-
-- PyTorch team for the deep learning framework
-- OpenCV community for computer vision tools
-- FER2013 dataset contributors
-- Research community for emotion recognition advances
-
 ---
 
-<div align="center">
 
-**Star this repository if you found it neat!**
 
 </div>
