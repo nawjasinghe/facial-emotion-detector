@@ -17,7 +17,7 @@
 
 ## Overview
 
-This facial emotion detection system provides real-time emotion recognition using deep learning. Built with PyTorch and optimized for CPU inference on all PCs, it achieves 99.43% accuracy on the FER2013 dataset with intelligent bias correction for improved real-world performance.
+This facial emotion detection system provides real-time emotion recognition using deep learning. Built with PyTorch and optimized for CPU inference on all PCs, it achieves 74.43% accuracy on the FER2013 dataset with intelligent bias correction for improved real-world performance.
 
 ## Model Download
 
