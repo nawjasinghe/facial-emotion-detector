@@ -6,7 +6,6 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.0+-green.svg)
 ![Accuracy](https://img.shields.io/badge/Accuracy-74.43%25-brightgreen.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 *Real-time emotion detection with bias correction*
 
