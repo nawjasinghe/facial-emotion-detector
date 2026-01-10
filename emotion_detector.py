@@ -330,7 +330,6 @@ class EmotionDetector:
         print("="*80)
         print("initializing ai-powered emotion recognition...")
         print("base accuracy: 74.43% | some bias correction added")
-        print("real-time sad reduction: 60% | neutral boost: 70%")
         print("-"*80)
         print("controls:")
         print("   press 's' -> save screenshot")
