@@ -1,7 +1,3 @@
-"""
-version: 3.0
-"""
-
 import cv2
 import torch
 import torch.nn as nn
