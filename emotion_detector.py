@@ -34,7 +34,6 @@ class ImprovedEmotionCNN(nn.Module):
         features = self.dropout(features)
         logits = self.classifier(features)
         return logits
-
 class EmotionDetector:
     def __init__(self, model_path=None):
         # emotion labels
