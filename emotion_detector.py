@@ -346,7 +346,6 @@ class EmotionDetector:
             (cv2.CAP_MSMF, "media foundation"),
             (cv2.CAP_ANY, "auto-detect")
         ]
-        
         for backend, name in camera_backends:
             print(f"trying camera backend: {name}")
             try:
