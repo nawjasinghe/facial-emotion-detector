@@ -9,8 +9,6 @@
 
 *Real-time emotion detection with bias correction*
 
-[Quick Start](#quick-start) • [Features](#features) • [Documentation](#documentation)
-
 </div>
 
 ---
